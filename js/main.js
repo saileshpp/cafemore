@@ -1,12 +1,15 @@
+AOS.init({
+    duration: 1500,
+    once: true,
+})
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    AOS.init({
-        duration: 1500,
-        once: true,
 
-    })
 
     const header = document.querySelector('header')
 
@@ -106,15 +109,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     splide.mount();
 
-    $(".banner_1 .owl-carousel").owlCarousel({
-        items: 1,
+  
+    const swiper1 = new Swiper('.swiper1', {
+        // Optional parameters
         loop: true,
-        animateOut: 'fadeOut',
-        slideTransition: 'ease',
-        autoplay: true,
-        autoplayTimeout: 5000,
+        speed: 400,
+        autoplay: {
+            delay: 4000,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+    const swiper2 = new Swiper('.swiper2', {
+        // Optional parameters
+        loop: true,
+        speed: 400,
+        autoplay: {
+            delay: 5000,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
     });
 
+
+    // $('.banner_1 .slick').slick({
+    //     autoplay: true,
+    //     autoplaySpeed: 4000,
+    //     arrows: false,
+    //     fade: true,
+    // });
 
 
     const hamburger = document.querySelector('header .hamburger')

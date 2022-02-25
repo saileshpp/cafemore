@@ -181,6 +181,15 @@ header {
             transition: var(--custom-transition);
             .navbar-item {
                 position: relative;
+                &:hover {
+                    .navbar-link {
+                        color: var(--custom-dark-primary);
+                        &::before,
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
                 .navbar-link {
                     color: var(--custom-black);
                     display: block;
@@ -286,10 +295,47 @@ header {
                 }
             }
             .active {
+                position: relative;
+                &:hover {
+                    &::before,
+                    &::after {
+                        width: 100%;
+                    }
+                    .navbar-link {
+                        &::before,
+                        &::after {
+                            right: 0;
+                            left: unset;
+                            width: 0;
+                        }
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 1.5px;
+                    background-color: var(--custom-dark-primary);
+                    transition: all 0.4s cubic-bezier(0.48, 0.57, 0.33, 0.89) 0.2s;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 110%;
+                    left: 0;
+                    width: 0%;
+                    height: 1.5px;
+                    background-color: var(--custom-dark-primary);
+                    transition: all 0.4s cubic-bezier(0.48, 0.57, 0.33, 0.89) 0.3s;
+                }
                 .navbar-link {
                     color: var(--custom-dark-primary);
                     &::before,
                     &::after {
+                        right: unset;
+                        left: 0;
                         width: 100%;
                     }
                 }
@@ -297,9 +343,10 @@ header {
         }
         .hamburger {
             display: none;
-            .hamburger-inner{
-                &::before{
+            .hamburger-inner {
+                &::before {
                     width: 30px;
+                    right: 0;
                 }
             }
         }
@@ -446,17 +493,24 @@ header {
     .banner_1 {
         position: relative;
         font-family: Futura;
-        .owl-carousel {
-            pointer-events: none;
-            .active {
-                animation: carouselFadeIn 5s 1 linear;
-            }
-            .owl-item {
-                height: 620px;
+        .swiper-wrapper {
+            overflow: hidden;
+            pointer-events: none !important;
+            .swiper-slide {
                 img {
-                    height: 620px;
-                    object-fit: cover;
+                    pointer-events: none !important;
                 }
+                pointer-events: none !important;
+            }
+            .swiper-slide-active {
+                img {
+                    animation: carouselFadeIn 5.5s 1 linear;
+                }
+            }
+            img {
+                width: 100%;
+                height: 620px;
+                object-fit: cover;
             }
         }
     }
@@ -696,7 +750,7 @@ header {
         transform: scale(0.9);
     }
     .is-active.is-visible {
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     .splide__arrow--prev {
         left: unset;
@@ -1094,14 +1148,14 @@ footer {
                         height: 0;
                         padding: 0 25px;
                         box-shadow: none;
-                        transform: translate(0,0);
+                        transform: translate(0, 0);
                     }
                     &:hover {
                         .dropdown_menu {
                             position: static;
                             height: 100%;
                             padding: 25px;
-                            transform: translate(0,0);
+                            transform: translate(0, 0);
                         }
                     }
                 }
@@ -1130,8 +1184,6 @@ footer {
         .splide__arrow--next {
             right: unset;
             left: 101%;
-        }
-        .splide__arrow {
         }
     }
     footer {
@@ -1700,6 +1752,28 @@ footer {
     .home_banner_2 {
         .hero {
             transform: translateY(-55%);
+        }
+    }
+    .about_section {
+        .img_wrap {
+            position: relative;
+            z-index: 1;
+            .owners {
+                max-width: 350px;
+                width: 100%;
+            }
+            .second {
+                position: absolute;
+                z-index: -1;
+                right: 2%;
+                top: 55%;
+                max-width: 250px;
+                width: 100%;
+            }
+        }
+        .pizza {
+            max-width: 300px;
+            width: 100%;
         }
     }
 }

@@ -8,9 +8,10 @@
     <title>Cafe Amore</title>
 
     <!-- CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.css"
+        integrity="sha512-+S5HQ2Ix/L84uhBLMimQiJlFjqR/Unnord77MEDNpWtK99i2Tk212EPb3/ahEjgaPRBKkKtTzMHIdO2HQXT3dQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -118,7 +119,7 @@
     </header>
 
     <!-- HERO SECTION  -->
-    <section class="home_banner_1 parallaxBG">
+    <section class="home_banner_1 parallaxBG overflow-hidden">
         <div class="container">
             <h1 data-aos="fade-up">
                 <span data-aos="zoom-in-up">
@@ -144,25 +145,25 @@
     </section>
 
     <!-- BANNER SECTION  -->
-    <section aria-label="Banner" class="home_banner_2">
+    <section aria-label="Banner" class="home_banner_2 overflow-hidden">
         <div class="row">
             <div class="col-lg-6">
-                <div class="banner_1" data-aos="fade-in">
-                    <ul class="owl-carousel">
-
-                        <li class="slide">
-                            <img src="img/home banner/artur-rutkowski-GdTLaWamFHw-unsplash.jpg" alt=""
-                                class="img-fluid">
-                        </li>
-                        <li class="slide">
-                            <img src="img/home banner/gilly-m9PkADy0Hj8-unsplash.jpg" alt="" class="img-fluid">
-                        </li>
-                        <li class="slide">
-                            <img src="img/home banner/jens-erik-ebbesen-1RHsJPr0KH8-unsplash.jpg" alt=""
-                                class="img-fluid">
-                        </li>
-
-                    </ul>
+                <div class=" banner_1" data-aos="fade-in">
+                    <div class="swiper1">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide ">
+                                <img src="img/home banner/artur-rutkowski-GdTLaWamFHw-unsplash.jpg" alt=""
+                                    class="img-fluid">
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="img/home banner/gilly-m9PkADy0Hj8-unsplash.jpg" alt="" class="img-fluid">
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="img/home banner/jens-erik-ebbesen-1RHsJPr0KH8-unsplash.jpg" alt=""
+                                    class="img-fluid">
+                            </li>
+                        </ul>
+                    </div>
                     <div class="hero">
                         <div class="heart_title">
                             <h3 class="mx-auto">Retail
@@ -188,16 +189,20 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="banner_1" data-aos="fade-in">
-                    <ul class="owl-carousel">
 
-                        <li class="slide">
-                            <img src="img/home banner/or-refaeli-JqhYL7Qrf3k-unsplash.jpeg" alt="" class="img-fluid">
-                        </li>
-                        <li class="slide">
-                            <img src="img/home banner/petr-sevcovic-qE1jxYXiwOA-unsplash.png" alt="" class="img-fluid">
-                        </li>
-                    </ul>
+                <div class=" banner_1" data-aos="fade-in">
+                    <div class="swiper2">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide ">
+                                <img src="img/home banner/or-refaeli-JqhYL7Qrf3k-unsplash.jpeg" alt=""
+                                    class="img-fluid">
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="img/home banner/petr-sevcovic-qE1jxYXiwOA-unsplash.png" alt=""
+                                    class="img-fluid">
+                            </li>
+                        </ul>
+                    </div>
                     <div class="hero">
                         <div class="heart_title">
                             <h3 class="mx-auto">Categoring
@@ -285,17 +290,9 @@
         </div>
     </section>
 
-    <!-- QR SECTION  -->
-
-    <section class="qr_section">
-        <div class="container">
-
-        </div>
-    </section>
-
 
     <!-- ABOUT AND MEALBY SECTION  -->
-    <div class="about_meal">
+    <div class="about_meal overflow-hidden">
 
         <!-- ABOUT SECTION  -->
         <section class="about_section" aria-labelledby="our story">
@@ -357,7 +354,7 @@
     </div>
 
     <!-- Testimonials  -->
-    <section class="testimonials" aria-labelledby="#testimonial">
+    <section class="testimonials overflow-hidden" aria-labelledby="#testimonial">
         <div class="container">
             <div class="heart_title" id="our story" data-aos="fade-up">
                 <h3 class="mx-auto" id="testimonial">Testimonials
@@ -433,7 +430,7 @@
     </section>
 
     <!-- CONTACT US  -->
-    <section aria-label="contact us">
+    <section aria-label="contact us overflow-hidden">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-5 col-lg-0">
@@ -602,9 +599,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"
+        integrity="sha512-4w/aaXboO6KY1E/dqYwfq09sZnM+XDIcWvmHhfxvMQ+qwK84kxgWtNkAqbFNMLYd6EYA3nSgxTSyif/D3vlVMg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="js/aos.js"></script>
     <script src="js/splide.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
