@@ -1,0 +1,433 @@
+// Fonts
+@font-face {
+    font-family: Reezy;
+    src: url(../../fonts/Reey-Regular.otf);
+}
+@font-face {
+    font-family: Brownie Girly;
+    src: url(../../fonts/BrownieGirly.ttf);
+}
+@font-face {
+    font-family: Futura;
+    src: url(../../fonts/Futura/futuramediumbt.ttf);
+}
+@font-face {
+    font-family: Futura Heavy;
+    src: url(../../fonts/Futura/FuturaHeavy.ttf);
+}
+@font-face {
+    font-family: Futura Light;
+    src: url(../../fonts/Futura/futuralightbt.ttf);
+}
+@font-face {
+    font-family: Dirty Bag;
+    src: url(../../fonts/DIRTYBAG.ttf);
+}
+
+:root {
+    --custom-font-Reezy-Regular: Reezy Regular;
+    --custom-font-BrownieGirly: BrownieGirly;
+    --custom-font-Futura: Futura;
+
+    --custom-primary: #ffb940;
+    --custom-dark-primary: #ae771e;
+    --custom-secondary: #e4363a;
+    --custom-black: #646464;
+    --custom-white: ;
+
+    /* Font size from 6 to 64 */
+    --custom-fs-6: 0.375rem;
+    --custom-fs-7: 0.4375rem;
+    --custom-fs-8: 0.5rem;
+    --custom-fs-9: 0.5625rem;
+    --custom-fs-10: 0.625rem;
+    --custom-fs-11: 0.6875rem;
+    --custom-fs-12: 0.6875rem;
+    --custom-fs-13: 0.8125rem;
+    --custom-fs-14: 0.875rem;
+    --custom-fs-15: 0.9375rem;
+    --custom-fs-16: 1rem;
+    --custom-fs-17: 1.0625rem;
+    --custom-fs-18: 1.125rem;
+    --custom-fs-19: 1.1875rem;
+    --custom-fs-20: 1.25rem;
+    --custom-fs-21: 1.3125rem;
+    --custom-fs-22: 1.375rem;
+    --custom-fs-23: 1.4375rem;
+    --custom-fs-24: 1.5rem;
+    --custom-fs-25: 1.5625rem;
+    --custom-fs-26: 1.625rem;
+    --custom-fs-27: 1.6875rem;
+    --custom-fs-28: 1.75rem;
+    --custom-fs-29: 1.8125rem;
+    --custom-fs-30: 1.875rem;
+    --custom-fs-31: 1.9375rem;
+    --custom-fs-32: 2rem;
+    --custom-fs-33: 2.0625rem;
+    --custom-fs-34: 2.125rem;
+    --custom-fs-35: 2.1875rem;
+    --custom-fs-36: 2.25rem;
+    --custom-fs-37: 2.3125rem;
+    --custom-fs-38: 2.375rem;
+    --custom-fs-39: 2.4375rem;
+    --custom-fs-40: 2.5rem;
+    --custom-fs-41: 2.5625rem;
+    --custom-fs-42: 2.625rem;
+    --custom-fs-43: 2.6875rem;
+    --custom-fs-44: 2.75rem;
+    --custom-fs-45: 2.8125rem;
+    --custom-fs-46: 2.875rem;
+    --custom-fs-47: 2.9375rem;
+    --custom-fs-48: 3rem;
+    --custom-fs-49: 3.0625rem;
+    --custom-fs-50: 3.125rem;
+    --custom-fs-51: 3.1875rem;
+    --custom-fs-52: 3.25rem;
+    --custom-fs-53: 3.3125rem;
+    --custom-fs-54: 3.375rem;
+    --custom-fs-55: 3.4375rem;
+    --custom-fs-56: 3.5rem;
+    --custom-fs-57: 3.5625rem;
+    --custom-fs-58: 3.625rem;
+    --custom-fs-59: 3.6875rem;
+    --custom-fs-60: 3.75rem;
+    --custom-fs-61: 3.8125rem;
+    --custom-fs-62: 3.875rem;
+    --custom-fs-63: 3.9375rem;
+    --custom-fs-64: 4rem;
+
+    --custom-fw-100: 100;
+    --custom-fw-200: 200;
+    --custom-fw-300: 030;
+    --custom-fw-400: 400;
+    --custom-fw-500: 500;
+    --custom-fw-600: 600;
+    --custom-fw-700: 700;
+    --custom-fw-800: 800;
+    --custom-fw-900: 900;
+
+    --custom-transition: all 400ms cubic-bezier(0.48, 0.57, 0.33, 0.89);
+
+    --box-shadow: ;
+}
+.custom-font-Reezy-Regular {
+    font-family: var(--custom-font-Reezy-Regular) !important;
+}
+.custom-font-BrownieGirly {
+    font-family: var(--custom-font-BrownieGirly) !important;
+}
+.custom-font-Futura {
+    font-family: var(--custom-font-Futura) !important;
+}
+.custom-font-futura-heavy {
+    font-family: Futura Heavy !important;
+}
+
+.custom-fs-6 {
+    font-size: var(--custom-fs-6);
+}
+.custom-fs-7 {
+    font-size: var(--custom-fs-7);
+}
+.custom-fs-8 {
+    font-size: var(--custom-fs-8);
+}
+.custom-fs-9 {
+    font-size: var(--custom-fs-9);
+}
+.custom-fs-10 {
+    font-size: var(--custom-fs-10);
+}
+.custom-fs-11 {
+    font-size: var(--custom-fs-11);
+}
+.custom-fs-12 {
+    font-size: var(--custom-fs-12);
+}
+.custom-fs-13 {
+    font-size: var(--custom-fs-13);
+}
+.custom-fs-14 {
+    font-size: var(--custom-fs-14);
+}
+.custom-fs-15 {
+    font-size: var(--custom-fs-15);
+}
+.custom-fs-16 {
+    font-size: var(--custom-fs-16);
+}
+.custom-fs-17 {
+    font-size: var(--custom-fs-17);
+}
+.custom-fs-18 {
+    font-size: var(--custom-fs-18);
+}
+.custom-fs-19 {
+    font-size: var(--custom-fs-19);
+}
+.custom-fs-20 {
+    font-size: var(--custom-fs-20);
+}
+.custom-fs-21 {
+    font-size: var(--custom-fs-21);
+}
+.custom-fs-22 {
+    font-size: var(--custom-fs-22);
+}
+.custom-fs-23 {
+    font-size: var(--custom-fs-23);
+}
+.custom-fs-24 {
+    font-size: var(--custom-fs-24);
+}
+.custom-fs-25 {
+    font-size: var(--custom-fs-25);
+}
+.custom-fs-26 {
+    font-size: var(--custom-fs-26);
+}
+.custom-fs-27 {
+    font-size: var(--custom-fs-27);
+}
+.custom-fs-28 {
+    font-size: var(--custom-fs-28);
+}
+.custom-fs-29 {
+    font-size: var(--custom-fs-29);
+}
+.custom-fs-30 {
+    font-size: var(--custom-fs-30);
+}
+.custom-fs-31 {
+    font-size: var(--custom-fs-31);
+}
+.custom-fs-32 {
+    font-size: var(--custom-fs-32);
+}
+.custom-fs-33 {
+    font-size: var(--custom-fs-33);
+}
+.custom-fs-34 {
+    font-size: var(--custom-fs-34);
+}
+.custom-fs-35 {
+    font-size: var(--custom-fs-35);
+}
+.custom-fs-36 {
+    font-size: var(--custom-fs-36);
+}
+.custom-fs-37 {
+    font-size: var(--custom-fs-37);
+}
+.custom-fs-38 {
+    font-size: var(--custom-fs-38);
+}
+.custom-fs-39 {
+    font-size: var(--custom-fs-39);
+}
+.custom-fs-40 {
+    font-size: var(--custom-fs-40);
+}
+.custom-fs-41 {
+    font-size: var(--custom-fs-41);
+}
+.custom-fs-42 {
+    font-size: var(--custom-fs-42);
+}
+.custom-fs-43 {
+    font-size: var(--custom-fs-43);
+}
+.custom-fs-44 {
+    font-size: var(--custom-fs-44);
+}
+.custom-fs-45 {
+    font-size: var(--custom-fs-45);
+}
+.custom-fs-46 {
+    font-size: var(--custom-fs-46);
+}
+.custom-fs-47 {
+    font-size: var(--custom-fs-47);
+}
+.custom-fs-48 {
+    font-size: var(--custom-fs-48);
+}
+.custom-fs-49 {
+    font-size: var(--custom-fs-49);
+}
+.custom-fs-50 {
+    font-size: var(--custom-fs-50);
+}
+.custom-fs-51 {
+    font-size: var(--custom-fs-51);
+}
+.custom-fs-52 {
+    font-size: var(--custom-fs-52);
+}
+.custom-fs-53 {
+    font-size: var(--custom-fs-53);
+}
+.custom-fs-54 {
+    font-size: var(--custom-fs-54);
+}
+.custom-fs-55 {
+    font-size: var(--custom-fs-55);
+}
+.custom-fs-56 {
+    font-size: var(--custom-fs-56);
+}
+.custom-fs-57 {
+    font-size: var(--custom-fs-57);
+}
+.custom-fs-58 {
+    font-size: var(--custom-fs-58);
+}
+.custom-fs-59 {
+    font-size: var(--custom-fs-59);
+}
+.custom-fs-60 {
+    font-size: var(--custom-fs-60);
+}
+.custom-fs-61 {
+    font-size: var(--custom-fs-61);
+}
+.custom-fs-62 {
+    font-size: var(--custom-fs-62);
+}
+.custom-fs-63 {
+    font-size: var(--custom-fs-63);
+}
+.custom-fs-64 {
+    font-size: var(--custom-fs-64);
+}
+
+.custom-fw-100 {
+    font-weight: var(--custom-fw-100) !important;
+}
+.custom-fw-200 {
+    font-weight: var(--custom-fw-200) !important;
+}
+.custom-fw-300 {
+    font-weight: var(--custom-fw-300) !important;
+}
+.custom-fw-400 {
+    font-weight: var(--custom-fw-400) !important;
+}
+.custom-fw-500 {
+    font-weight: var(--custom-fw-500) !important;
+}
+.custom-fw-600 {
+    font-weight: var(--custom-fw-600) !important;
+}
+.custom-fw-700 {
+    font-weight: var(--custom-fw-700) !important;
+}
+.custom-fw-800 {
+    font-weight: var(--custom-fw-800) !important;
+}
+.custom-fw-900 {
+    font-weight: var(--custom-fw-900) !important;
+}
+
+.custom-text-primary {
+    color: var(--custom-primary) !important;
+}
+.custom-text-dark-primary {
+    color: var(--custom-dark-primary) !important;
+}
+.custom-text-secondary {
+    color: var(--custom-secondary) !important;
+}
+.custom-text-black {
+    color: var(--custom-black) !important;
+}
+.custom-text-white {
+    color: var(--custom-white) !important;
+}
+
+.custom-bg-primary {
+    background-color: var(--custom-primary) !important;
+}
+.custom-bg-dark-primary {
+    background-color: var(--custom-dark-primary) !important;
+}
+.custom-bg-secondary {
+    background-color: var(--custom-secondary) !important;
+}
+.custom-bg-black {
+    background-color: var(--custom-black) !important;
+}
+.custom-bg-white {
+    background-color: var(--custom-white) !important;
+}
+
+.custom-transition {
+    transition: var(--custom-transition) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.line-1 {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.line-2 {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.line-3 {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+// CUSTOM AOS ANIMATION
+// [data-aos="open-down"] {
+//     transition-property: transform, opacity, height;
+//     opacity: 0;
+//     height: 0;
+//     &.aos-animate {
+//         opacity: 1;
+//         height: 100%;
+//     }
+
+//     // @media screen and (min-width: 768px) {
+//     //     transform: translateX(100px);
+
+//     //     &.aos-animate {
+//     //         transform: translateX(0);
+//     //     }
+//     // }
+// }
+/* responsive lg */
+@media (max-width: 991px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+/* responsive md */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14.5px;
+    }
+}
+/* responsive sm */
+@media (max-width: 575px) {
+    :root {
+        font-size: 14px;
+    }
+}
