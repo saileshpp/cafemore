@@ -1,7 +1,3 @@
-AOS.init({
-    duration: 1500,
-    once: true,
-})
 
 
 
@@ -109,39 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     splide.mount();
 
-  
-    const swiper1 = new Swiper('.swiper1', {
-        // Optional parameters
-        loop: true,
-        speed: 400,
-        autoplay: {
-            delay: 4000,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-    });
-    const swiper2 = new Swiper('.swiper2', {
-        // Optional parameters
-        loop: true,
-        speed: 400,
-        autoplay: {
-            delay: 5000,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-    });
-
-
-    // $('.banner_1 .slick').slick({
-    //     autoplay: true,
-    //     autoplaySpeed: 4000,
-    //     arrows: false,
-    //     fade: true,
-    // });
 
 
     const hamburger = document.querySelector('header .hamburger')
@@ -150,4 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('is-active')
         navbar.classList.toggle('navbar-active')
     })
+
+
+
+    AOS.init({
+        duration: 1500,
+        once: true,
+    })
+
+
 });

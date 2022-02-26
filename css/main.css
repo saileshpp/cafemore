@@ -1,31 +1,31 @@
 @font-face {
   font-family: Reezy;
-  src: url(../../fonts/Reey-Regular.otf);
+  src: url(/fonts/Reey-Regular.otf);
 }
 
 @font-face {
   font-family: Brownie Girly;
-  src: url(../../fonts/BrownieGirly.ttf);
+  src: url(/fonts/BrownieGirly.ttf);
 }
 
 @font-face {
   font-family: Futura;
-  src: url(../../fonts/Futura/futuramediumbt.ttf);
+  src: url(/fonts/Futura/futuramediumbt.ttf);
 }
 
 @font-face {
   font-family: Futura Heavy;
-  src: url(../../fonts/Futura/FuturaHeavy.ttf);
+  src: url(/fonts/Futura/FuturaHeavy.ttf);
 }
 
 @font-face {
   font-family: Futura Light;
-  src: url(../../fonts/Futura/futuralightbt.ttf);
+  src: url(/fonts/Futura/futuralightbt.ttf);
 }
 
 @font-face {
   font-family: Dirty Bag;
-  src: url(../../fonts/DIRTYBAG.ttf);
+  src: url(/fonts/DIRTYBAG.ttf) format("truetype");
 }
 
 :root {
@@ -592,6 +592,10 @@ section {
   will-change: transform;
 }
 
+.btn:hover {
+  bottom: 2px;
+}
+
 .btn:hover::before, .btn:hover::after {
   -webkit-transform: rotate(72deg) scale(1, 1);
           transform: rotate(72deg) scale(1, 1);
@@ -625,8 +629,6 @@ section {
   color: #fff;
   -webkit-box-shadow: 0 0 5px 1px #ae771e;
           box-shadow: 0 0 5px 1px #ae771e;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
 }
 
 .btn_primary::before, .btn_primary::after {
@@ -655,8 +657,6 @@ section {
   color: #fff;
   -webkit-box-shadow: 0 0 5px 1px var(--custom-secondary);
           box-shadow: 0 0 5px 1px var(--custom-secondary);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
 }
 
 .btn_secondary::before, .btn_secondary::after {
@@ -776,6 +776,8 @@ header .container .navbar .navbar-item .navbar-link::after {
 
 header .container .navbar .navbar-item .dropdown_btn {
   display: none;
+  -webkit-transition: var(--custom-transition);
+  transition: var(--custom-transition);
 }
 
 header .container .navbar .navbar-item .dropdown_menu {
@@ -853,6 +855,12 @@ header .container .navbar .navbar-item:hover .dropdown_menu {
   visibility: visible;
 }
 
+header .container .navbar .navbar-item:hover .dropdown_btn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: var(--custom-dark-primary);
+}
+
 header .container .navbar .active {
   position: relative;
 }
@@ -914,8 +922,8 @@ header .container .hamburger .hamburger-inner::before {
   position: fixed;
   top: 0;
   padding: 10px 0;
-  -webkit-box-shadow: 0 0 10px #aeaeae;
-          box-shadow: 0 0 10px #aeaeae;
+  -webkit-box-shadow: 0 0 30px -12px #000;
+          box-shadow: 0 0 30px -12px #000;
 }
 
 .home_banner_1 {
@@ -1086,29 +1094,41 @@ header .container .hamburger .hamburger-inner::before {
   font-family: Futura;
 }
 
-.home_banner_2 .banner_1 .swiper-wrapper {
+.home_banner_2 .banner_1 .slider {
+  position: relative;
+  height: 620px;
   overflow: hidden;
   pointer-events: none !important;
 }
 
-.home_banner_2 .banner_1 .swiper-wrapper .swiper-slide {
-  pointer-events: none !important;
+.home_banner_2 .banner_1 .slider::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-.home_banner_2 .banner_1 .swiper-wrapper .swiper-slide img {
-  pointer-events: none !important;
+.home_banner_2 .banner_1 .slider .slide {
+  position: absolute;
+  inset: 0;
 }
 
-.home_banner_2 .banner_1 .swiper-wrapper .swiper-slide-active img {
-  -webkit-animation: carouselFadeIn 5.5s 1 linear;
-          animation: carouselFadeIn 5.5s 1 linear;
-}
-
-.home_banner_2 .banner_1 .swiper-wrapper img {
+.home_banner_2 .banner_1 .slider .slide img {
   width: 100%;
   height: 620px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.home_banner_2 .banner_1 .slider .slide1 img {
+  -webkit-animation: carouselFadeIn1 15s infinite linear 0.2s;
+          animation: carouselFadeIn1 15s infinite linear 0.2s;
+}
+
+.home_banner_2 .banner_1 .slider .slide2 img {
+  -webkit-animation: carouselFadeIn2 15s infinite linear;
+          animation: carouselFadeIn2 15s infinite linear;
 }
 
 .MENU SECTION {
@@ -1992,6 +2012,102 @@ footer .mushroom4 {
   }
 }
 
+@-webkit-keyframes carouselFadeIn1 {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  93% {
+    -webkit-transform: scale(1.12);
+            transform: scale(1.12);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes carouselFadeIn1 {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+  93% {
+    -webkit-transform: scale(1.12);
+            transform: scale(1.12);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes carouselFadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes carouselFadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
 /* responsive xl */
 @media (max-width: 1199px) {
   .testimonials .splide__arrow--prev {
@@ -2706,6 +2822,18 @@ footer .mushroom4 {
   .about_section .pizza {
     max-width: 300px;
     width: 100%;
+  }
+  .about_section .plant {
+    top: 65%;
+  }
+  .about_section .butterfly1 {
+    top: 50%;
+  }
+  .about_section .butterfly2 {
+    top: 46%;
+  }
+  .mealbychef {
+    background-position-x: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
