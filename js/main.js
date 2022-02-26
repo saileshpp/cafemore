@@ -33,31 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // PARALLAX BG
 
-        const parallaxBGs = document.querySelectorAll('.parallaxBG')
-        if (parallaxBGs) {
-            parallaxBGs.forEach(
-                parallaxBG => {
+        // const parallaxBGs = document.querySelectorAll('.parallaxBG')
+        // if (parallaxBGs) {
+        //     parallaxBGs.forEach(
+        //         parallaxBG => {
 
-                    function handler(entries) {
-                        for (entry of entries) {
-                            if (entry.isIntersecting) {
-
-
-                                value = value - (parallaxBG.offsetTop + parallaxBG.clientHeight)
-                                parallaxBG.style.backgroundPositionY = - (value * 0.1) + 'px'
-                            }
-                        }
-                    }
+        //             function handler(entries) {
+        //                 for (entry of entries) {
+        //                     if (entry.isIntersecting) {
 
 
-                    let observer = new IntersectionObserver(handler);
+        //                         value = value - (parallaxBG.offsetTop + parallaxBG.clientHeight)
+        //                         parallaxBG.style.backgroundPositionY = - (value * 0.1) + 'px'
+        //                     }
+        //                 }
+        //             }
 
-                    observer.observe(parallaxBG);
+
+        //             let observer = new IntersectionObserver(handler);
+
+        //             observer.observe(parallaxBG);
 
 
-                }
-            )
-        }
+        //         }
+        //     )
+        // }
 
         // PARALLAX FOR HOME HERO  
         if (homeBannerFood) {
