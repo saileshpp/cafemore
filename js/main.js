@@ -1,7 +1,4 @@
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -33,31 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // PARALLAX BG
 
-        // const parallaxBGs = document.querySelectorAll('.parallaxBG')
-        // if (parallaxBGs) {
-        //     parallaxBGs.forEach(
-        //         parallaxBG => {
+        const parallaxBGs = document.querySelectorAll('.parallax_BG')
+        if (parallaxBGs) {
+            parallaxBGs.forEach(
+                parallaxBG => {
 
-        //             function handler(entries) {
-        //                 for (entry of entries) {
-        //                     if (entry.isIntersecting) {
-
-
-        //                         value = value - (parallaxBG.offsetTop + parallaxBG.clientHeight)
-        //                         parallaxBG.style.backgroundPositionY = - (value * 0.1) + 'px'
-        //                     }
-        //                 }
-        //             }
+                    function handler(entries) {
+                        for (entry of entries) {
+                            if (entry.isIntersecting) {
 
 
-        //             let observer = new IntersectionObserver(handler);
+                                value = value - (parallaxBG.offsetTop + parallaxBG.clientHeight)
+                                parallaxBG.style.backgroundPositionY = - (value * 0.1) + 'px'
+                            }
+                        }
+                    }
 
-        //             observer.observe(parallaxBG);
+
+                    let observer = new IntersectionObserver(handler);
+
+                    observer.observe(parallaxBG);
 
 
-        //         }
-        //     )
-        // }
+                }
+            )
+        }
 
         // PARALLAX FOR HOME HERO  
         if (homeBannerFood) {
@@ -73,38 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
             pizza.style.transform = "translate(-50%, -50%)" + "rotate(" + value * 0.01 + 'deg )'
         }
 
-
-
-
     })
 
     // INITIATING TESIMONIAL SLIDER 
 
-    let splide = new Splide('.testimonials .splide', {
-        type: 'loop',
-        perPage: 3,
-        speed: 800,
-        rewindSpeed: 800,
-        perMove: 1,
-        focus: 'center',
-        gap: '30px',
-        updateOnMove: true,
-        autoplay: true,
-        interval: 3000,
-        trimSpace: 'move',
-        pagination: false,
-        breakpoints: {
-            993: {
-                perPage: 2,
-                focus: 'start',
-            },
-            768: {
-                perPage: 1,
-            },
-        }
-    });
-    splide.mount();
+    if (document.querySelector('.testimonials .splide')) {
 
+        let splide = new Splide('.testimonials .splide', {
+            type: 'loop',
+            perPage: 3,
+            speed: 800,
+            rewindSpeed: 800,
+            perMove: 1,
+            focus: 'center',
+            gap: '30px',
+            updateOnMove: true,
+            autoplay: true,
+            interval: 3000,
+            trimSpace: 'move',
+            pagination: false,
+            breakpoints: {
+                993: {
+                    perPage: 2,
+                    focus: 'start',
+                },
+                768: {
+                    perPage: 1,
+                },
+            }
+        });
+
+        splide.mount();
+
+    }
 
 
     const hamburger = document.querySelector('header .hamburger')
@@ -121,5 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
         once: true,
     })
 
+    const circleTexts = document.querySelectorAll('.curved')
 
+    if (circleTexts) {
+
+        circleTexts.forEach(
+            circleText => {
+                const circleType = new CircleType(circleText);
+                circleType.radius(100);
+            }
+
+        )
+    }
+
+
+    lightGallery(document.getElementById('cafeamoregallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+    });
 });
